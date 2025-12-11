@@ -12,7 +12,8 @@
         background: linear-gradient(135deg, #0a0f1c, #11192b);
         color: white;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
         padding: 40px 0;
     }
 
@@ -95,7 +96,6 @@
     <h1>Buy Robux</h1>
     <div class="subtitle">Instant delivery • Safe & verified</div>
 
-    <!-- Updated Robux icon here -->
     <div class="price-big">
         <img src="https://tr.rbxcdn.com/5b3e57ede98a5d8ec5ca7a5eccf8dcec/150/150/Image/Png">
         1,000
@@ -104,6 +104,34 @@
     <button class="buy-btn">Buy – 1,000 Robux</button>
 
     <div class="secure">Secure Payment • Roblox Verified</div>
+</div>
+
+<!-- Added bottom content -->
+<div style="
+    margin-top: 40px;
+    width: 90%;
+    max-width: 420px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 18px;
+    padding: 25px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.35);
+    animation: fadeIn 0.8s ease;
+">
+    <h2 style="margin: 0 0 10px; font-size: 22px; font-weight: 600;">What You Get</h2>
+
+    <ul style="list-style: none; padding: 0; margin: 0; font-size: 15px; line-height: 1.7; opacity: 0.9;">
+        <li>✔ Instant Robux delivery</li>
+        <li>✔ Safe verified purchase</li>
+        <li>✔ Receipt + purchase ID</li>
+        <li>✔ 24/7 automated support</li>
+    </ul>
+</div>
+
+<div style="text-align:center; margin-top: 30px; opacity: 0.6; font-size: 13px;">
+    Powered by Roblox Secure Payments
 </div>
 
 </body>
