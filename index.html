@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AutoCord Pro — Discord Bot Manager • 1,000 Robux</title>
+  <title>AutoCord Pro — Discord Bot Manager • Tiered Plans</title>
 
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -106,6 +106,157 @@
 
     footer.site{ margin-top:36px; padding:20px; border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent); border:1px solid rgba(255,255,255,0.02); color:var(--muted); font-size:13px; display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
 
+    /* NEW: Pricing Tiers Styles */
+    .pricing-tiers-section { margin-top: 36px; }
+    .pricing-tiers-section h2 { text-align: center; font-family: Poppins, Inter; font-size: 32px; margin-bottom: 36px; background: linear-gradient(90deg, var(--accent-2), var(--accent-1)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    
+    .tiers-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+    
+    .pricing-tier {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      border: 1px solid rgba(255,255,255,0.04);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .pricing-tier:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+      border-color: rgba(255,255,255,0.08);
+    }
+    
+    .tier-badge {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      align-self: flex-start;
+    }
+    
+    .basic-badge { background: linear-gradient(90deg, rgba(88,101,242,0.15), rgba(88,101,242,0.08)); color: #8b9dff; }
+    .premium-badge { background: linear-gradient(90deg, rgba(255,70,85,0.15), rgba(255,70,85,0.08)); color: #ff8b94; }
+    
+    .tier-title {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: white;
+    }
+    
+    .tier-duration {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+    
+    .tier-price {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    
+    .price-amount {
+      font-size: 36px;
+      font-weight: 900;
+      color: var(--accent-3);
+      text-shadow: 0 6px 20px rgba(255, 204, 0, 0.2);
+    }
+    
+    .price-robux {
+      font-size: 14px;
+      color: var(--muted);
+    }
+    
+    .tier-features {
+      flex-grow: 1;
+      margin-bottom: 24px;
+    }
+    
+    .tier-features ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .tier-features li {
+      padding: 8px 0;
+      color: var(--muted);
+      font-size: 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.02);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .tier-features li:before {
+      content: "✓";
+      color: var(--accent-2);
+      font-weight: bold;
+    }
+    
+    .premium-tier .tier-features li:before {
+      color: var(--accent-1);
+    }
+    
+    .tier-button {
+      display: block;
+      text-align: center;
+      padding: 14px 20px;
+      background: linear-gradient(90deg, var(--accent-2), #4752c4);
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: all 0.2s ease;
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
+    }
+    
+    .premium-tier .tier-button {
+      background: linear-gradient(90deg, var(--accent-1), #d93a4a);
+      box-shadow: 0 10px 25px rgba(255, 70, 85, 0.15);
+    }
+    
+    .tier-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(88, 101, 242, 0.25);
+    }
+    
+    .premium-tier .tier-button:hover {
+      box-shadow: 0 12px 30px rgba(255, 70, 85, 0.25);
+    }
+    
+    .recommended-tag {
+      position: absolute;
+      top: -12px;
+      right: 20px;
+      background: linear-gradient(90deg, var(--accent-3), #e6b400);
+      color: #0b0d14;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 800;
+      box-shadow: 0 6px 20px rgba(255, 204, 0, 0.2);
+    }
+    
+    .premium-tier {
+      position: relative;
+      border-color: rgba(255, 70, 85, 0.1);
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,70,85,0.02));
+    }
+
     /* Demo layout specifics */
     .demo-wrap { display:flex; gap:18px; align-items:flex-start; margin-top:8px; }
     .demo-panel { background:#2f3136; color:white; padding:14px; border-radius:12px; border:2px solid #7289da; min-width:300px; box-shadow:0 8px 30px rgba(0,0,0,0.5); }
@@ -124,6 +275,7 @@
     @media (max-width:640px){
       .features-grid{ grid-template-columns:1fr }
       .hero-sub{ max-width:100% }
+      .tiers-container{ grid-template-columns: 1fr; }
     }
 
     .reveal{ opacity:0; transform:translateY(8px); transition:transform .6s cubic-bezier(.2,.9,.3,1),opacity .6s }
@@ -143,23 +295,23 @@
 
       <nav class="toplinks" aria-label="Primary navigation">
         <a class="nav" href="#features">Features</a>
+        <a class="nav" href="#pricing-tiers">Pricing</a>
         <a class="nav" href="#howto">How to buy</a>
         <a class="nav" href="#support">Support</a>
-        <a class="nav" href="#pricing">Pricing</a>
       </nav>
     </header>
 
     <!-- HERO -->
     <section class="hero" aria-labelledby="hero-heading">
       <div class="hero-left">
-        <div class="kicker">Pro • Lifetime • Secure</div>
+        <div class="kicker">Pro • Tiered Plans • Secure</div>
         <h2 id="hero-heading" class="hero-title">Automate Discord — built for <span style="background:linear-gradient(90deg,var(--accent-2),var(--accent-1));-webkit-background-clip:text;color:transparent">Roblox</span></h2>
         <p class="hero-sub">AutoCord Pro gives you scheduled messaging, auto-cleanup, moderation workflows, and one-click integration with Roblox groups — all with super-low latency and robust safety controls.</p>
 
         <!-- BUY and Demo buttons -->
         <div class="cta-row">
-          <a href="https://www.roblox.com/games/YOUR-GAME-ID/gamepass/YOUR-GAMEPASS-ID" class="btn btn-primary" target="_blank" rel="noopener" aria-label="Buy with Robux">
-            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968332.png" alt="Robux" style="height:20px;"> BUY — 1,000 Robux
+          <a href="#pricing-tiers" class="btn btn-primary" aria-label="View Pricing Plans">
+            <i class="fas fa-tags"></i> VIEW PLANS
           </a>
 
           <button class="btn btn-ghost" id="demoBtn" aria-haspopup="dialog" aria-controls="demoModal">
@@ -167,13 +319,13 @@
           </button>
         </div>
 
-        <!-- Price Card -->
+        <!-- Updated Price Card -->
         <div class="price-card" aria-hidden>
           <div class="price-big">
             <img src="https://cdn-icons-png.flaticon.com/512/5968/5968332.png" alt="Robux" style="height:30px;filter:drop-shadow(0 6px 18px rgba(0,0,0,0.45))">
-            1,000
+            Plans from 1,200 Robux
           </div>
-          <div class="price-note">One-time • Lifetime access • Free updates</div>
+          <div class="price-note">Choose from Basic or Premium • 15 or 30 days • Free support</div>
         </div>
 
         <!-- Already Purchased Card -->
@@ -197,7 +349,7 @@
 
         <div class="stats" aria-hidden>
           <div class="stat">
-            <b>1K</b><small>Robux</small>
+            <b>4</b><small>Plans</small>
           </div>
           <div class="stat">
             <b>24/7</b><small>Support</small>
@@ -211,6 +363,127 @@
           <strong>Trusted:</strong> Roblox developers • group owners • community managers
         </div>
       </aside>
+    </section>
+
+    <!-- NEW PRICING TIERS SECTION -->
+    <section id="pricing-tiers" class="pricing-tiers-section reveal">
+      <h2>Choose Your Plan</h2>
+      <div class="tiers-container">
+        
+        <!-- Basic AutoCord 15 Days -->
+        <div class="pricing-tier reveal">
+          <div class="tier-badge basic-badge">BASIC</div>
+          <h3 class="tier-title">AutoCord Basic</h3>
+          <div class="tier-duration">15 Day License</div>
+          
+          <div class="tier-price">
+            <span class="price-amount">1,200</span>
+            <span class="price-robux">Robux</span>
+          </div>
+          
+          <div class="tier-features">
+            <ul>
+              <li>Scheduled Messaging</li>
+              <li>Auto-Deletion Commands</li>
+              <li>Basic Moderation</li>
+              <li>Channel Management</li>
+              <li>Email Support</li>
+            </ul>
+          </div>
+          
+          <a href="https://www.roblox.com/catalog/YOUR-BASIC-15D-PRODUCT" target="_blank" class="tier-button" aria-label="Buy Basic 15 Days for 1,200 Robux">
+            <i class="fas fa-shopping-cart"></i> BUY NOW
+          </a>
+        </div>
+        
+        <!-- Basic AutoCord 30 Days -->
+        <div class="pricing-tier reveal">
+          <div class="tier-badge basic-badge">BASIC</div>
+          <h3 class="tier-title">AutoCord Basic</h3>
+          <div class="tier-duration">30 Day License</div>
+          
+          <div class="tier-price">
+            <span class="price-amount">2,200</span>
+            <span class="price-robux">Robux</span>
+          </div>
+          
+          <div class="tier-features">
+            <ul>
+              <li>Scheduled Messaging</li>
+              <li>Auto-Deletion Commands</li>
+              <li>Basic Moderation</li>
+              <li>Channel Management</li>
+              <li>Email Support</li>
+              <li>Extended 30-day Access</li>
+            </ul>
+          </div>
+          
+          <a href="https://www.roblox.com/catalog/YOUR-BASIC-30D-PRODUCT" target="_blank" class="tier-button" aria-label="Buy Basic 30 Days for 2,200 Robux">
+            <i class="fas fa-shopping-cart"></i> BUY NOW
+          </a>
+        </div>
+        
+        <!-- Premium AutoCord 15 Days -->
+        <div class="pricing-tier premium-tier reveal">
+          <div class="tier-badge premium-badge">PREMIUM</div>
+          <h3 class="tier-title">AutoCord Premium</h3>
+          <div class="tier-duration">15 Day License</div>
+          
+          <div class="tier-price">
+            <span class="price-amount">1,800</span>
+            <span class="price-robux">Robux</span>
+          </div>
+          
+          <div class="tier-features">
+            <ul>
+              <li>All Basic Features</li>
+              <li>Advanced Analytics Dashboard</li>
+              <li>Custom Command Creation</li>
+              <li>Priority Support</li>
+              <li>Role Auto-Assignment</li>
+              <li>Multi-Server Management</li>
+            </ul>
+          </div>
+          
+          <a href="https://www.roblox.com/catalog/YOUR-PREMIUM-15D-PRODUCT" target="_blank" class="tier-button" aria-label="Buy Premium 15 Days for 1,800 Robux">
+            <i class="fas fa-crown"></i> BUY PREMIUM
+          </a>
+        </div>
+        
+        <!-- Premium AutoCord 30 Days -->
+        <div class="pricing-tier premium-tier reveal">
+          <div class="recommended-tag">MOST POPULAR</div>
+          <div class="tier-badge premium-badge">PREMIUM</div>
+          <h3 class="tier-title">AutoCord Premium</h3>
+          <div class="tier-duration">30 Day License</div>
+          
+          <div class="tier-price">
+            <span class="price-amount">3,200</span>
+            <span class="price-robux">Robux</span>
+          </div>
+          
+          <div class="tier-features">
+            <ul>
+              <li>All Basic Features</li>
+              <li>Advanced Analytics Dashboard</li>
+              <li>Custom Command Creation</li>
+              <li>Priority 24/7 Support</li>
+              <li>Role Auto-Assignment</li>
+              <li>Multi-Server Management</li>
+              <li>API Access</li>
+              <li>Custom Integration Support</li>
+            </ul>
+          </div>
+          
+          <a href="https://www.roblox.com/catalog/YOUR-PREMIUM-30D-PRODUCT" target="_blank" class="tier-button" aria-label="Buy Premium 30 Days for 3,200 Robux">
+            <i class="fas fa-crown"></i> BUY PREMIUM
+          </a>
+        </div>
+      </div>
+      
+      <div style="text-align: center; color: var(--muted); font-size: 14px; max-width: 800px; margin: 0 auto;">
+        <p><i class="fas fa-sync-alt" style="margin-right: 8px;"></i> All plans auto-renewal available • <i class="fas fa-shield-alt" style="margin-right: 8px; margin-left: 20px;"></i> 7-day money-back guarantee • <i class="fas fa-bolt" style="margin-right: 8px; margin-left: 20px;"></i> Instant delivery after purchase</p>
+      </div>
     </section>
 
     <!-- FEATURES / DEMO -->
@@ -323,175 +596,3 @@
     <div class="cta-banner reveal" style="margin-top:18px" id="pricing">
       <div class="left">
         <h3 style="margin:0">Ready to automate your Discord?</h3>
-        <p style="margin:6px 0 0">One-time 1,000 Robux — lifetime license, instant verification bot delivery.</p>
-      </div>
-
-      <div class="right">
-        <a class="discord-btn" href="https://discord.gg/5aZKV8eE5R" target="_blank" rel="noopener">
-          <i class="fab fa-discord"></i> Join Discord
-        </a>
-      </div>
-    </div>
-
-    <footer class="site">
-      <div>&copy; 2025 AutoCord Pro. All rights reserved.</div>
-      <div>Made with ❤️ for Roblox communities</div>
-    </footer>
-  </div>
-
-  <!-- Demo JS (safe simulation only) -->
-  <script>
-    (function(){
-      // Demo state
-      let sendTimer = null;
-      let deleteTimer = null;
-      let demoCount = 0;
-      const logsEl = document.getElementById('demoLogs');
-      const fakeMessagesEl = document.getElementById('fakeMessages');
-
-      // helpers
-      function addLog(type, text){
-        const colors = { success: '#43b581', error: '#f04747', info: '#7289da', warning:'#faa61a' };
-        const d = new Date();
-        const time = d.toLocaleTimeString();
-        const el = document.createElement('div');
-        el.style.color = colors[type] || '#b9bbbe';
-        el.style.fontSize = '12px';
-        el.style.padding = '4px 0';
-        el.textContent = `[${time}] ${text}`;
-        logsEl.prepend(el);
-      }
-
-      function addFakeMessage(text){
-        const msgWrap = document.createElement('div');
-        msgWrap.className = 'fake-msg';
-        const author = document.createElement('div');
-        author.className = 'author';
-        author.textContent = 'You';
-        author.style.color = '#43b581';
-        author.style.fontWeight = '700';
-        const body = document.createElement('div');
-        body.textContent = text;
-        msgWrap.appendChild(author);
-        msgWrap.appendChild(body);
-        fakeMessagesEl.appendChild(msgWrap);
-        // auto-scroll
-        fakeMessagesEl.scrollTop = fakeMessagesEl.scrollHeight;
-      }
-
-      function clearFakeMessages(){
-        fakeMessagesEl.innerHTML = '';
-      }
-
-      // DOM refs
-      const btnStart = document.getElementById('demoStart');
-      const btnStop = document.getElementById('demoStop');
-      const btnSend = document.getElementById('demoSend');
-      const btnDel  = document.getElementById('demoDelete');
-      const inputMsg = document.getElementById('demoMessageInput');
-      const inputSI = document.getElementById('demoSendInterval');
-      const inputDI = document.getElementById('demoDelInterval');
-      const btnCopy = document.getElementById('demoCopy');
-      const btnMin = document.getElementById('demoMinBtn');
-      const panelContent = document.querySelector('#demoPanel .panel-content');
-      const btnSettings = document.getElementById('openSettings');
-
-      // Start simulation: send immediately and schedule repeated sends/deletes
-      function startDemo(){
-        if(sendTimer) { addLog('warning','Demo already running'); return; }
-        addLog('info','Starting demo bot');
-        // single send now
-        doSend();
-        // set timers
-        sendTimer = setInterval(doSend, Math.max(1000, (parseInt(inputSI.value)||5) * 1000));
-        deleteTimer = setInterval(doDelete, Math.max(1000, (parseInt(inputDI.value)||12) * 1000));
-        updateStatusUI(true);
-      }
-
-      function stopDemo(){
-        if(!sendTimer){ addLog('warning','Demo not running'); return; }
-        clearInterval(sendTimer); clearInterval(deleteTimer); sendTimer=null; deleteTimer=null;
-        addLog('warning','Demo stopped');
-        updateStatusUI(false);
-      }
-
-      function doSend(){
-        demoCount++;
-        const text = inputMsg.value || `Demo message #${demoCount}`;
-        addLog('success', `Sent: ${text}`);
-        addFakeMessage(text);
-      }
-
-      function doDelete(){
-        if(demoCount === 0){
-          addLog('warning', 'No demo messages to delete');
-          return;
-        }
-        addLog('success', `Deleted ${demoCount} demo messages`);
-        demoCount = 0;
-        clearFakeMessages();
-      }
-
-      function updateStatusUI(running){
-        // Update small visual cue in header if needed (kept simple)
-        // (In a full integration you could show counts etc.)
-      }
-
-      // Button wiring
-      btnStart.addEventListener('click', startDemo);
-      btnStop.addEventListener('click', stopDemo);
-      btnSend.addEventListener('click', doSend);
-      btnDel.addEventListener('click', doDelete);
-      btnCopy.addEventListener('click', function(){
-        const demoToken = document.getElementById('demoToken').textContent;
-        navigator.clipboard?.writeText(demoToken).then(()=> {
-          alert('✅ Demo token copied: ' + demoToken);
-        }).catch(()=> {
-          alert('Demo token: ' + demoToken);
-        });
-      });
-
-      btnMin.addEventListener('click', function(){
-        if(panelContent.style.display === 'none'){
-          panelContent.style.display = 'block';
-          this.textContent = 'MINIMIZE';
-        } else {
-          panelContent.style.display = 'none';
-          this.textContent = 'EXPAND';
-        }
-      });
-
-      // Settings quick dialog (safe, client-only)
-      btnSettings.addEventListener('click', function(){
-        const newMsg = prompt('Default demo message:', inputMsg.value);
-        if(newMsg !== null) inputMsg.value = newMsg;
-        const newSI = prompt('Send interval in seconds:', inputSI.value);
-        if(newSI !== null) inputSI.value = Math.max(1, parseInt(newSI)||5);
-        const newDI = prompt('Delete interval in seconds:', inputDI.value);
-        if(newDI !== null) inputDI.value = Math.max(1, parseInt(newDI)||12);
-        addLog('info', 'Settings updated (demo only)');
-        // if demo is running, restart timers to apply new intervals
-        if(sendTimer){
-          clearInterval(sendTimer); clearInterval(deleteTimer);
-          sendTimer = setInterval(doSend, Math.max(1000, (parseInt(inputSI.value)||5) * 1000));
-          deleteTimer = setInterval(doDelete, Math.max(1000, (parseInt(inputDI.value)||12) * 1000));
-        }
-      });
-
-      // small UX: Live Demo button in hero opens demo area (scrolls)
-      document.getElementById('demoBtn').addEventListener('click', function(){
-        document.getElementById('demoArea').scrollIntoView({behavior:'smooth', block:'center'});
-        addLog('info','Opened demo area');
-      });
-
-      // reveal animation for features
-      document.querySelectorAll('.reveal').forEach((el, i) => {
-        setTimeout(()=> el.classList.add('visible'), 100 + i * 80);
-      });
-
-      // initial log
-      addLog('info','Demo ready — this is a safe simulation (no tokens are accessed).');
-    })();
-  </script>
-</body>
-</html>
