@@ -178,6 +178,24 @@
       color: var(--muted);
     }
     
+    .discount-badge {
+      background: linear-gradient(90deg, #43b581, #3ca374);
+      color: white;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-left: 12px;
+      display: inline-block;
+    }
+    
+    .original-price {
+      text-decoration: line-through;
+      color: var(--muted);
+      font-size: 18px;
+      margin-right: 8px;
+    }
+    
     .tier-features {
       flex-grow: 1;
       margin-bottom: 24px;
@@ -323,9 +341,9 @@
         <div class="price-card" aria-hidden>
           <div class="price-big">
             <img src="https://cdn-icons-png.flaticon.com/512/5968/5968332.png" alt="Robux" style="height:30px;filter:drop-shadow(0 6px 18px rgba(0,0,0,0.45))">
-            Plans from 1,200 Robux
+            Plans from 1,000 Robux
           </div>
-          <div class="price-note">Choose from Basic or Premium • 15 or 30 days • Free support</div>
+          <div class="price-note">15% off popular deals • Premium features available • Free support</div>
         </div>
 
         <!-- Already Purchased Card -->
@@ -370,14 +388,14 @@
       <h2>Choose Your Plan</h2>
       <div class="tiers-container">
         
-        <!-- Basic AutoCord 15 Days -->
+        <!-- AutoCord Basic 15 Days -->
         <div class="pricing-tier reveal">
           <div class="tier-badge basic-badge">BASIC</div>
           <h3 class="tier-title">AutoCord Basic</h3>
           <div class="tier-duration">15 Day License</div>
           
           <div class="tier-price">
-            <span class="price-amount">1,200</span>
+            <span class="price-amount">1,000</span>
             <span class="price-robux">Robux</span>
           </div>
           
@@ -391,20 +409,25 @@
             </ul>
           </div>
           
-          <a href="https://www.roblox.com/catalog/YOUR-BASIC-15D-PRODUCT" target="_blank" class="tier-button" aria-label="Buy Basic 15 Days for 1,200 Robux">
+          <a href="https://www.roblox.com/catalog/YOUR-BASIC-15D-PRODUCT" target="_blank" class="tier-button" aria-label="Buy Basic 15 Days for 1,000 Robux">
             <i class="fas fa-shopping-cart"></i> BUY NOW
           </a>
         </div>
         
-        <!-- Basic AutoCord 30 Days -->
+        <!-- AutoCord Basic 30 Days -->
         <div class="pricing-tier reveal">
+          <div class="recommended-tag">MOST POPULAR</div>
           <div class="tier-badge basic-badge">BASIC</div>
           <h3 class="tier-title">AutoCord Basic</h3>
           <div class="tier-duration">30 Day License</div>
           
           <div class="tier-price">
-            <span class="price-amount">2,200</span>
+            <div style="display: flex; align-items: baseline;">
+              <span class="original-price">2,000</span>
+              <span class="price-amount">1,700</span>
+            </div>
             <span class="price-robux">Robux</span>
+            <span class="discount-badge">15% OFF</span>
           </div>
           
           <div class="tier-features">
@@ -418,19 +441,19 @@
             </ul>
           </div>
           
-          <a href="https://www.roblox.com/catalog/YOUR-BASIC-30D-PRODUCT" target="_blank" class="tier-button" aria-label="Buy Basic 30 Days for 2,200 Robux">
+          <a href="https://www.roblox.com/catalog/YOUR-BASIC-30D-PRODUCT" target="_blank" class="tier-button" aria-label="Buy Basic 30 Days for 1,700 Robux">
             <i class="fas fa-shopping-cart"></i> BUY NOW
           </a>
         </div>
         
-        <!-- Premium AutoCord 15 Days -->
+        <!-- AutoCord Pro 15 Days -->
         <div class="pricing-tier premium-tier reveal">
-          <div class="tier-badge premium-badge">PREMIUM</div>
-          <h3 class="tier-title">AutoCord Premium</h3>
+          <div class="tier-badge premium-badge">PRO</div>
+          <h3 class="tier-title">AutoCord Pro</h3>
           <div class="tier-duration">15 Day License</div>
           
           <div class="tier-price">
-            <span class="price-amount">1,800</span>
+            <span class="price-amount">2,500</span>
             <span class="price-robux">Robux</span>
           </div>
           
@@ -445,21 +468,24 @@
             </ul>
           </div>
           
-          <a href="https://www.roblox.com/catalog/YOUR-PREMIUM-15D-PRODUCT" target="_blank" class="tier-button" aria-label="Buy Premium 15 Days for 1,800 Robux">
-            <i class="fas fa-crown"></i> BUY PREMIUM
+          <a href="https://www.roblox.com/catalog/YOUR-PRO-15D-PRODUCT" target="_blank" class="tier-button" aria-label="Buy Pro 15 Days for 2,500 Robux">
+            <i class="fas fa-crown"></i> BUY PRO
           </a>
         </div>
         
-        <!-- Premium AutoCord 30 Days -->
+        <!-- AutoCord Pro 30 Days -->
         <div class="pricing-tier premium-tier reveal">
-          <div class="recommended-tag">MOST POPULAR</div>
-          <div class="tier-badge premium-badge">PREMIUM</div>
-          <h3 class="tier-title">AutoCord Premium</h3>
+          <div class="tier-badge premium-badge">PRO</div>
+          <h3 class="tier-title">AutoCord Pro</h3>
           <div class="tier-duration">30 Day License</div>
           
           <div class="tier-price">
-            <span class="price-amount">3,200</span>
+            <div style="display: flex; align-items: baseline;">
+              <span class="original-price">5,300</span>
+              <span class="price-amount">4,500</span>
+            </div>
             <span class="price-robux">Robux</span>
+            <span class="discount-badge">15% OFF</span>
           </div>
           
           <div class="tier-features">
@@ -475,8 +501,8 @@
             </ul>
           </div>
           
-          <a href="https://www.roblox.com/catalog/YOUR-PREMIUM-30D-PRODUCT" target="_blank" class="tier-button" aria-label="Buy Premium 30 Days for 3,200 Robux">
-            <i class="fas fa-crown"></i> BUY PREMIUM
+          <a href="https://www.roblox.com/catalog/YOUR-PRO-30D-PRODUCT" target="_blank" class="tier-button" aria-label="Buy Pro 30 Days for 4,500 Robux">
+            <i class="fas fa-crown"></i> BUY PRO
           </a>
         </div>
       </div>
@@ -576,23 +602,4 @@
               <div style="font-size:13px;color:var(--muted);">🔑 Demo Token: <span id="demoToken">demo_token_1234</span></div>
               <div>
                 <button id="demoCopy" class="small" style="background:#7289da;color:white;border-radius:6px;">📋 COPY</button>
-                <button id="openSettings" class="small" style="background:#5865f2;color:white;border-radius:6px;margin-left:8px;">⚙️ SETTINGS</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Fake Channel (next to panel) -->
-        <div class="demo-channel" id="fakeChannel">
-          <div style="color:var(--accent-2); font-weight:800; margin-bottom:10px;"># demo-channel</div>
-          <div id="fakeMessages">
-            <!-- messages will be injected here -->
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA / Pricing -->
-    <div class="cta-banner reveal" style="margin-top:18px" id="pricing">
-      <div class="left">
-        <h3 style="margin:0">Ready to automate your Discord?</h3>
+                <button
